@@ -1,7 +1,6 @@
 #include <stdbool.h>
 
 typedef struct __matrix_impl Matrix;
-
 struct __matrix_impl {
     float values[4][4];
 
@@ -10,7 +9,7 @@ struct __matrix_impl {
     Matrix (*mul)(const Matrix, const Matrix);
 };
 
-static const float epsilon = 1/10000.0;
+static const float epsilon = 1 / 10000.0;
 
 static bool equal(const Matrix a, const Matrix b)
 {
@@ -29,7 +28,7 @@ static Matrix mul(const Matrix a, const Matrix b)
             { 0, 0, 0, 0, },
             { 0, 0, 0, 0, },
             { 0, 0, 0, 0, },
-        }
+        },
     };
 
     for (int i = 0; i < 4; i++)
@@ -73,6 +72,6 @@ int main()
             { 82, 108, 134, 160, },
             { 34,  44,  54,  64, },
             { 82, 108, 134, 160, },
-        }
+        },
     });
 }
