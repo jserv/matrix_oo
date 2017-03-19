@@ -1,9 +1,8 @@
 #include <stdbool.h>
 
-struct __matrix;
-typedef struct __matrix Matrix;
+typedef struct __matrix_impl Matrix;
 
-struct __matrix {
+struct __matrix_impl {
     float values[4][4];
 
     /* operations */
